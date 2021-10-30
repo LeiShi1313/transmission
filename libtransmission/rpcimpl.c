@@ -365,6 +365,8 @@ static char const* torrentReannounce(tr_session* session, tr_variant* args_in, t
     TR_ASSERT(idle_data == NULL);
 
     int torrentCount;
+
+    skipHash();
     tr_torrent** torrents = getTorrents(session, args_in, &torrentCount);
 
     for (int i = 0; i < torrentCount; ++i)
